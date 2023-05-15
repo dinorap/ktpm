@@ -1,0 +1,19 @@
+<html>
+<form method="POST" action="">
+    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+    <label>Tên người dùng:</label>
+    <input type="text" name="username" value="<?php echo $row['username']; ?>"><br>
+    <label>Email:</label>
+    <input type="text" name="email" value="<?php echo $row['email']; ?>"><br>
+    <label>Mật khẩu:</label>
+    <input type="password" name="password" value="<?php echo $row['password']; ?>"><br>
+    <label>Quyền:</label>
+    <select name="role">
+        <option value="0" <?php if ($row['ad'] == 0)
+            echo "selected"; ?>>Khách</option>
+        <option value="1" <?php if ($row['ad'] == 1)
+            echo "selected"; ?>>Admin</option>
+    </select><br>
+    <input type="submit" name="update" value="Cập nhật">
+</form>
+</html>

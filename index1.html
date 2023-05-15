@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý tài khoản người dùng</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Quản lý tài khoản người dùng</h1>
+    <button id="add-user-btn">Thêm tài khoản</button>
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>Tên đăng nhập</th>
+          <th>Email</th>
+          <th>Quyền</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>user1</td>
+          <td>user1@example.com</td>
+          <td>Người dùng</td>
+          <td>
+            <button class="edit-btn">Sửa</button>
+            <button class="delete-btn">Xóa</button>
+          </td>
+        </tr>
+        <tr>
+          <td>user2</td>
+          <td>user2@example.com</td>
+          <td>Quản trị viên</td>
+          <td>
+            <button class="edit-btn">Sửa</button>
+            <button class="delete-btn">Xóa</button>
+          </td>
+        </tr>
+        <!-- Thêm các hàng tài khoản người dùng khác tại đây -->
+      </tbody>
+    </table>
+    <div id="user-form-container">
+      <h2 id="form-title">Thêm tài khoản</h2>
+      <form id="user-form">
+        <input type="hidden" id="user-id" />
+        <div class="form-group">
+          <label for="username">Tên đăng nhập:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="role">Quyền:</label>
+          <select id="role" name="role" required>
+            <option value="user">Người dùng</option>
+            <option value="admin">Quản trị viên</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit-btn">Lưu</button>
+          <button type="button" id="cancel-btn">Hủy</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
